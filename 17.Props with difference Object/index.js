@@ -38,16 +38,18 @@ function App() {
   );
 }
 
-function Joke(p) {
+function Joke(props) {
   return (
     <div className="contact-card">
-      <h3 style={{ display: p.setup ? "block" : "none" }}>Setup:{p.setup}</h3>
+      <h3 style={{ display: props.setup ? "block" : "none" }}>
+        Setup:{props.setup}
+      </h3>
 
-      <p>Punchline:{p.punchline}</p>
+      <props>Punchline:{props.punchline}</props>
     </div>
   );
 }
 
 ReactDOM.render(<App />, document.getElementById("root"));
 
-//</div>{p.setup && <h3>Setup:{p.setup}</h3>}
+//</div>{props.setup && <h3>Setup:{props.setup}</h3>}
